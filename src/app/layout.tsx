@@ -13,8 +13,8 @@ import {
 import Providers from "@/app/Providers";
 
 export const metadata: Metadata = {
-  title: "Antonietta",
-  description: "Antonietta",
+  title: "Ara",
+  description: "Ara",
   icons: [{ rel: "icon", url: "/images/home/hero/logo.png", sizes: "11x11" }],
 };
 
