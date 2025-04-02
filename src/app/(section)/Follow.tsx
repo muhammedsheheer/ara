@@ -35,9 +35,9 @@ const Follow: React.FC = () => {
               <Link
                 href={""}
                 target="_blank"
-                className="font-poppins text-center text-lg font-[400] lowercase text-[#D0A36C] lg:text-xl"
+                className="text-center font-poppins text-lg font-[400] lowercase text-[#D0A36C] lg:text-xl"
               >
-                @marlos.brasserie
+                @ara.brasserie
               </Link>
             </div>
             <div className="w-full lg:w-[25%]">
@@ -65,7 +65,7 @@ const Follow: React.FC = () => {
             <div className="flex w-full items-center justify-center lg:w-[25%]">
               {" "}
               <h3 className="text-center font-open_sans text-2xl font-[400] uppercase text-[#D0A36C]">
-                Marlo’s SALAD
+                Ara SALAD
               </h3>
             </div>
             <div className="w-full lg:w-[50%]">
@@ -82,7 +82,7 @@ const Follow: React.FC = () => {
             <div className="flex w-full items-center justify-center lg:w-[25%]">
               {" "}
               <h3 className="text-center font-open_sans text-2xl font-[400] uppercase text-[#D0A36C]">
-                Marlo’s SALAD
+                Ara SALAD
               </h3>
             </div>
           </div>

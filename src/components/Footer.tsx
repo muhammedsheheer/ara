@@ -34,23 +34,23 @@ const Footer = ({}) => {
                     <Link
                       className="font-open_sans text-xs font-[400] uppercase tracking-[1.6px] text-[#323232]"
                       target="_blank"
-                      href={""}
+                      href={"https://g.co/kgs/eRnt7dX"}
                     >
-                      49 Allerton Rd, Liverpool L25
+                      3 Moncrieffe St, Bolton BL3 <br /> 6AU, United Kingdom
                     </Link>
                   </span>
                   <span>
                     <Link
                       className="font-open_sans text-xs font-[400] uppercase tracking-[1.6px] text-[#323232]"
-                      href={""}
+                      href={"tel:+07429939565"}
                     >
-                      01512451500{" "}
+                      07429 939565
                     </Link>
                   </span>
                   <span>
                     <Link
                       className="font-open_sans text-xs font-[400] uppercase tracking-[1.6px] text-[#323232]"
-                      href={""}
+                      href={"mailto:moorishl@yahoo.com"}
                     >
                       moorishl@yahoo.com{" "}
                     </Link>
@@ -61,10 +61,7 @@ const Footer = ({}) => {
                 <Link href={""} target="_blank">
                   <Icons.instagram className="text-[#323232]" />
                 </Link>
-                <Link href={""} target="_blank">
-                  <Icons.unknown className="text-[#323232]" />
-                </Link>
-                <Link href={""} target="_blank">
+                <Link href={"https://g.co/kgs/eRnt7dX"} target="_blank">
                   <Icons.google className="text-[#323232]" />
                 </Link>
                 <Link href={""} target="_blank">
@@ -92,12 +89,12 @@ const Footer = ({}) => {
                 About
               </Link>
 
-              <Link
+              {/* <Link
                 href={""}
                 className="font-open_sans text-xs font-[400] uppercase tracking-[1.6px] text-[#323232]"
               >
                 Products
-              </Link>
+              </Link> */}
               <Link
                 href={"/table-booking"}
                 className="font-open_sans text-xs font-[400] uppercase tracking-[1.6px] text-[#323232]"
@@ -123,32 +120,23 @@ const Footer = ({}) => {
 
               <div className="flex w-full flex-row gap-4 md:w-[400px] md:justify-between">
                 <span className="font-open_sans text-xs font-[400] uppercase tracking-[1.6px] text-[#323232]">
-                  Monday - Thursday
+                  Tuesday
                 </span>
                 <span className="font-open_sans text-xs font-[400] uppercase tracking-[1.6px] text-[#323232]">
-                  8 AM - 11 PM{" "}
+                  8 AM - 6 PM{" "}
                 </span>
               </div>
               <div className="h-full w-full border-b-[1px] border-b-[#D9D9D9]" />
 
               <div className="flex w-full flex-row gap-4 md:w-[400px] md:justify-between">
                 <span className="font-open_sans text-xs font-[400] uppercase tracking-[1.6px] text-[#323232]">
-                  Friday - Saturday{" "}
+                  Wednesday - Sunday{" "}
                 </span>
                 <span className="font-open_sans text-xs font-[400] uppercase tracking-[1.6px] text-[#323232]">
-                  9 AM - 11 PM{" "}
+                  9 AM - 6 PM{" "}
                 </span>
               </div>
               <div className="h-full w-full border-b-[1px] border-b-[#D9D9D9]" />
-
-              <div className="flex w-full flex-row gap-4 md:w-[400px] md:justify-between">
-                <span className="font-open_sans text-xs font-[400] uppercase tracking-[1.6px] text-[#323232]">
-                  Sunday{" "}
-                </span>
-                <span className="font-open_sans text-xs font-[400] uppercase tracking-[1.6px] text-[#323232]">
-                  9 AM - 10 PM{" "}
-                </span>
-              </div>
             </div>
           </div>
         </div>
@@ -159,13 +147,13 @@ const Footer = ({}) => {
           <div className="flex flex-col items-center justify-center gap-1 md:flex-row md:items-start md:justify-between">
             <Link
               className="font-open_sans text-xs font-[400] lowercase tracking-[1px] text-[#323131]"
-              href={""}
+              href={"https://foodo.ai/"}
               target="_blank"
             >
               Powerd by foodo
             </Link>
             <p className="pb-6 font-open_sans text-xs font-[400] lowercase tracking-[1px] text-[#323131]">
-              © 2024 antonietta ALL RIGHTS RESERVED
+              © 2024 Ara ALL RIGHTS RESERVED
             </p>
           </div>
         </div>

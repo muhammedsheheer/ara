@@ -31,10 +31,18 @@ const Navbar = ({
     setIsOpen(!isOpen);
   };
 
+  // const logoSrc =
+  //   pathname === "/"
+  //     ? "/images/home/hero/logo.png"
+  //     : "/images/home/hero/logof.png";
+
   const logoSrc =
     pathname === "/"
       ? "/images/home/hero/logo.png"
-      : "/images/home/hero/logof.png";
+      : pathname === "/menu"
+        ? "/images/home/hero/logo.png"
+        : "/images/home/hero/logof.png";
+
   return (
     <nav
       className={cn(
@@ -59,32 +67,40 @@ const Navbar = ({
           <div className="flex flex-row items-center justify-center gap-8">
             <Link
               href={"/"}
-              className="font-open_sans text-xs font-[400] uppercase tracking-[1.6px] text-[#323232]"
+              className={`font-open_sans text-xs font-[400] uppercase tracking-[1.6px] ${
+                pathname === "/menu" ? "text-[#fff]" : "text-[#323232]"
+              }`}
             >
               Home
             </Link>
             <Link
               href={"/menu"}
-              className="font-open_sans text-xs font-[400] uppercase tracking-[1.6px] text-[#323232]"
+              className={`font-open_sans text-xs font-[400] uppercase tracking-[1.6px] ${
+                pathname === "/menu" ? "text-[#fff]" : "text-[#323232]"
+              }`}
             >
               Menu
             </Link>
             <Link
               href={"/about-us"}
-              className="font-open_sans text-xs font-[400] uppercase tracking-[1.6px] text-[#323232]"
+              className={`font-open_sans text-xs font-[400] uppercase tracking-[1.6px] ${
+                pathname === "/menu" ? "text-[#fff]" : "text-[#323232]"
+              }`}
             >
               About
             </Link>
 
-            <Link
+            {/* <Link
               href={""}
               className="font-open_sans text-xs font-[400] uppercase tracking-[1.6px] text-[#323232]"
             >
               Products
-            </Link>
+            </Link> */}
             <Link
               href={"/contact"}
-              className="font-open_sans text-xs font-[400] uppercase tracking-[1.6px] text-[#323232]"
+              className={`font-open_sans text-xs font-[400] uppercase tracking-[1.6px] ${
+                pathname === "/menu" ? "text-[#fff]" : "text-[#323232]"
+              }`}
             >
               Contact Us
             </Link>

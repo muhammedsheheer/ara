@@ -13,7 +13,7 @@ import Image from "next/image";
 const Reviews = ({}) => {
   const { reviews } = useRestaurant();
   return (
-    <section className="md:px-[350px]md:mp-10 relative z-50 flex h-full w-full justify-center bg-[#D0A36C] px-6 2xl:px-[440px]">
+    <section className="md:px-[350px]md:mp-10 relative z-50 flex h-full w-full justify-center bg-[#D0A36C] px-6 pb-32 md:pb-6 2xl:px-[440px]">
       <div className="absolute bottom-0 left-0 hidden md:block">
         <Image
           src={"/images/home/reserve/left.png"}
@@ -59,25 +59,25 @@ const Reviews = ({}) => {
                       </div>
                       <div className="flex flex-col gap-4">
                         <p className="font-cormorant line-clamp-6 max-w-[450px] text-center text-sm font-[500] uppercase text-[#fff] md:px-4 lg:leading-[120%]">
-                          {review.text}
+                          {review.text.text}
                         </p>
                       </div>
                     </div>
                     <div className="flex w-full flex-col items-center justify-center gap-2">
                       <Image
                         src={
-                          review.profile_photo_url ||
+                          review.authorAttribution.photoUri ||
                           "/images/home/reviews/pictures/anna-mathew.svg"
                         }
                         width={64}
                         height={64}
-                        alt={review.author_name}
+                        alt={review.authorAttribution.displayName}
                       />
                       <p className="font-cormorant text-center text-sm font-[600] uppercase leading-[120%] text-[#fff]">
                         Gerrin Tom
                       </p>
                       <p className="font-cormorant text-center text-xs font-[600] uppercase text-[#fff]">
-                        {review.relative_time_description}
+                        {review.relativePublishTimeDescription}
                       </p>
                     </div>
                   </CarouselItem>
