@@ -2,12 +2,13 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { motion } from "framer-motion";
 
 const About: React.FC = () => {
   return (
     <section className="relative h-full w-full bg-[#F7E0C4] pt-20 md:pt-14">
       <div className="absolute left-0 right-0 top-4 w-full overflow-hidden">
-        <p className="font-sofia_sans whitespace-nowrap text-lg font-[400] lowercase tracking-[3px] text-[#323232]">
+        <p className="whitespace-nowrap font-sofia_sans text-lg font-[400] lowercase tracking-[3px] text-[#323232]">
           &#47;&#47; latte &#47;&#47; Fresh pasta &#47;&#47; cookies &#47;&#47;
           croissants &#47;&#47; latte &#47;&#47; Fresh pasta &#47;&#47; cookies
           &#47;&#47; croissants &#47;&#47; latte &#47;&#47; Fresh pasta pasta
@@ -16,7 +17,13 @@ const About: React.FC = () => {
         </p>
       </div>
       <div className="flex flex-col gap-4 pt-4 md:flex-row md:gap-10">
-        <div className="flex w-full items-center justify-center bg-[#D0A36C] md:w-[50%]">
+        <motion.div
+          className="flex w-full items-center justify-center bg-[#D0A36C] md:w-[50%]"
+          initial={{ opacity: 0, x: 100 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: false }}
+          transition={{ duration: 1.5, ease: "easeOut" }}
+        >
           <div className="flex flex-col items-center justify-center gap-4 px-8 py-12 md:px-24 md:py-36">
             <h1 className="font-poppins text-3xl font-[400] uppercase text-[#fff] md:text-4xl">
               the hearts behind
@@ -34,14 +41,18 @@ const About: React.FC = () => {
               </Button>
             </div>
           </div>
-        </div>{" "}
+        </motion.div>{" "}
         <div className="w-full bg-[#fff] px-4 py-6 md:w-[50%] md:px-14 md:py-14">
-          <Image
+          <motion.img
             src={"/images/home/about/image2.png"}
             width={281}
             height={74}
             alt="image2"
             className="h-full w-full"
+            initial={{ opacity: 0, y: 50, scale: 0.8 }}
+            whileInView={{ opacity: 1, y: 0, scale: 1 }}
+            viewport={{ once: false, amount: 0.5 }}
+            transition={{ duration: 1.5, ease: "easeOut" }}
           />
         </div>
       </div>

@@ -11,14 +11,15 @@ const JoinUs = ({}) => {
         backgroundSize: "cover",
       }}
     >
-      <div className="flex h-full w-full flex-col-reverse items-center justify-center gap-4 md:flex-row">
-        <div className="flex h-full w-full flex-col items-center justify-center gap-[2.5rem] p-6">
-          <h1 className="font-oswald max-w-[500px] text-center text-5xl leading-[60px] text-[#fff]">
+      <div className="relative flex h-full w-full flex-col-reverse items-center justify-center gap-4 md:flex-row">
+        <div className="absolute inset-0 z-0 bg-black/50" />
+        <div className="z-10 flex h-full w-full flex-col items-center justify-center gap-[2.5rem] p-6">
+          <h1 className="max-w-[500px] text-center font-poppins text-5xl text-[#fff] md:leading-[60px]">
             Join Us for an
             <br />
             Unforgettable Meal
           </h1>
-          <p className="max-w-[450px] text-center font-[600] leading-[160%] text-[#ffff]">
+          <p className="max-w-[450px] text-center font-inter font-[600] leading-[160%] text-[#ffff]">
             Whether it’s an intimate dinner or a grand celebration, Ara invites
             you to indulge in an exceptional culinary journey. From expertly
             crafted flavors to hand-selected ingredients, every dish reflects

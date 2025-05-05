@@ -2,13 +2,20 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { motion } from "framer-motion";
 
 const Reserve: React.FC = () => {
   return (
-    <section className="relative h-full w-full bg-[#F7E0C4] pt-12 md:h-[80vh]">
+    <section className="relative h-full w-full overflow-hidden bg-[#F7E0C4] pt-12 md:h-[80vh]">
       {/*mobile screen */}
       <div className="flex flex-col md:hidden">
-        <div className="flex flex-col items-center justify-center gap-4">
+        <motion.div
+          className="flex flex-col items-center justify-center gap-4"
+          initial={{ opacity: 0, y: 100 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: false }}
+          transition={{ duration: 1.5, ease: "easeOut" }}
+        >
           <h1 className="font-poppins text-3xl font-[400] uppercase text-[#6B4B2B] md:text-4xl">
             RESERVE YOUR TABLE{" "}
           </h1>
@@ -23,29 +30,43 @@ const Reserve: React.FC = () => {
               <Link href={"/table-booking"}>Reserve</Link>
             </Button>
           </div>
-        </div>
+        </motion.div>
         <div>
-          <Image
+          <motion.img
             src={"/images/home/reserve/image.png"}
             width={80}
             height={10}
             alt="image"
             className="h-[450px] w-[350px]"
+            initial={{ opacity: 0, y: 50, scale: 0.8 }}
+            whileInView={{ opacity: 1, y: 0, scale: 1 }}
+            viewport={{ once: false, amount: 0.5 }}
+            transition={{ duration: 1.5, ease: "easeOut" }}
           />
         </div>
       </div>
       {/*big screen */}
       <div className="absolute -top-28 left-0 z-50 hidden md:block">
-        <Image
+        <motion.img
           src={"/images/home/reserve/image.png"}
           width={80}
           height={10}
           alt="image"
           className="h-[800px] w-[600px]"
+          initial={{ opacity: 0, y: 50, scale: 0.8 }}
+          whileInView={{ opacity: 1, y: 0, scale: 1 }}
+          viewport={{ once: false, amount: 0.5 }}
+          transition={{ duration: 1.5, ease: "easeOut" }}
         />
       </div>
       <div className="absolute bottom-16 right-8 hidden md:block">
-        <div className="flex flex-col items-center justify-center gap-4">
+        <motion.div
+          className="flex flex-col items-center justify-center gap-4"
+          initial={{ opacity: 0, y: 100 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: false }}
+          transition={{ duration: 1.5, ease: "easeOut" }}
+        >
           <h1 className="font-poppins text-3xl font-[400] uppercase text-[#6B4B2B] md:text-4xl">
             RESERVE YOUR TABLE{" "}
           </h1>
@@ -60,9 +81,9 @@ const Reserve: React.FC = () => {
               <Link href={"/table-booking"}>Reserve</Link>
             </Button>
           </div>
-        </div>
+        </motion.div>
       </div>
-      <div className="absolute -left-14 -top-8 z-20 hidden -rotate-45 flex-col overflow-hidden md:flex">
+      <div className="absolute -left-16 -top-7 z-20 hidden -rotate-45 flex-col overflow-hidden md:flex">
         <h1 className="font-sofia_sans text-[140px] font-[700] uppercase tracking-[2px] text-[#fff]">
           cakes
         </h1>

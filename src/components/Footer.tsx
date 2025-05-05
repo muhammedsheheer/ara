@@ -117,7 +117,15 @@ const Footer = ({}) => {
             </h6>
             <div className="flex flex-col items-center gap-4 md:items-start md:gap-6">
               <div className="h-full w-full border-b-[1px] border-b-[#D9D9D9]" />
-
+              <div className="flex w-full flex-row gap-4 md:w-[400px] md:justify-between">
+                <span className="font-open_sans text-xs font-[400] uppercase tracking-[1.6px] text-[#323232]">
+                  Monday
+                </span>
+                <span className="font-open_sans text-xs font-[400] uppercase tracking-[1.6px] text-[#323232]">
+                  9 AM - 6 PM{" "}
+                </span>
+              </div>
+              <div className="h-full w-full border-b-[1px] border-b-[#D9D9D9]" />
               <div className="flex w-full flex-row gap-4 md:w-[400px] md:justify-between">
                 <span className="font-open_sans text-xs font-[400] uppercase tracking-[1.6px] text-[#323232]">
                   Tuesday

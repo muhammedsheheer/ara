@@ -2,12 +2,19 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { motion } from "framer-motion";
 
 const Story: React.FC = () => {
   return (
     <section className="h-full w-full bg-[#fff] pb-8 pt-12 md:pt-24">
       <div className="flex flex-col gap-0 pt-4 md:flex-row">
-        <div className="flex w-full flex-col items-center justify-center gap-4 md:w-1/2">
+        <motion.div
+          className="flex w-full flex-col items-center justify-center gap-4 md:w-1/2"
+          initial={{ opacity: 0, y: 100 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: false }}
+          transition={{ duration: 1.5, ease: "easeOut" }}
+        >
           <h1 className="font-poppins text-3xl font-[400] uppercase text-[#6B4B2B] md:text-4xl">
             the hearts behind
           </h1>
@@ -22,17 +29,21 @@ const Story: React.FC = () => {
               <Link href={"/table-booking"}>Reserve</Link>
             </Button>
           </div>
-        </div>
+        </motion.div>
         <div className="relative flex w-full flex-col md:w-1/2">
           <div className="absolute bottom-2 right-4 md:right-[7%]">
             <div className="relative h-[400px] w-[350px] bg-[#fff] md:h-[550px] md:w-[600px]">
               <div className="absolute -top-24 left-4 right-4 md:left-20 md:right-20">
-                <Image
+                <motion.img
                   src={"/images/home/story/cacke.png"}
                   width={281}
                   height={74}
                   alt="cacke"
                   className="h-full w-full md:h-[570px]"
+                  initial={{ opacity: 0, y: 50, scale: 0.8 }}
+                  whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                  viewport={{ once: false, amount: 0.5 }}
+                  transition={{ duration: 1.5, ease: "easeOut" }}
                 />
               </div>
             </div>

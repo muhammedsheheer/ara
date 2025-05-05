@@ -68,7 +68,9 @@ const Navbar = ({
             <Link
               href={"/"}
               className={`font-open_sans text-xs font-[400] uppercase tracking-[1.6px] ${
-                pathname === "/menu" ? "text-[#fff]" : "text-[#323232]"
+                pathname === "/menu" || "/table-booking"
+                  ? "text-[#fff]"
+                  : "text-[#323232]"
               }`}
             >
               Home
@@ -76,7 +78,9 @@ const Navbar = ({
             <Link
               href={"/menu"}
               className={`font-open_sans text-xs font-[400] uppercase tracking-[1.6px] ${
-                pathname === "/menu" ? "text-[#fff]" : "text-[#323232]"
+                pathname === "/menu" || "/table-booking"
+                  ? "text-[#fff]"
+                  : "text-[#323232]"
               }`}
             >
               Menu
@@ -84,7 +88,9 @@ const Navbar = ({
             <Link
               href={"/about-us"}
               className={`font-open_sans text-xs font-[400] uppercase tracking-[1.6px] ${
-                pathname === "/menu" ? "text-[#fff]" : "text-[#323232]"
+                pathname === "/menu" || "/table-booking"
+                  ? "text-[#fff]"
+                  : "text-[#323232]"
               }`}
             >
               About
@@ -99,7 +105,9 @@ const Navbar = ({
             <Link
               href={"/contact"}
               className={`font-open_sans text-xs font-[400] uppercase tracking-[1.6px] ${
-                pathname === "/menu" ? "text-[#fff]" : "text-[#323232]"
+                pathname === "/menu" || "/table-booking"
+                  ? "text-[#fff]"
+                  : "text-[#323232]"
               }`}
             >
               Contact Us

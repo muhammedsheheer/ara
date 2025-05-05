@@ -1,5 +1,6 @@
 import Image from "next/image";
 import React from "react";
+import { motion } from "framer-motion";
 
 const Products: React.FC = () => {
   return (
@@ -25,36 +26,48 @@ const Products: React.FC = () => {
           </div>
         </div>
         <div className="z-50 flex w-full flex-col items-center justify-center gap-4 bg-[#fff] px-8 pb-8 pt-8 md:w-[33%] md:px-12 md:pb-20 md:pt-12">
-          <Image
+          <motion.img
             src={"/images/home/products/image1.png"}
             width={281}
             height={74}
             alt="image"
             className="h-auto w-full"
+            initial={{ opacity: 0, y: 50, scale: 0.8 }}
+            whileInView={{ opacity: 1, y: 0, scale: 1 }}
+            viewport={{ once: false, amount: 0.5 }}
+            transition={{ duration: 1.5, ease: "easeOut" }}
           />
           <h1 className="font-open_sans text-lg font-[400] uppercase text-[#323232] md:text-xl md:tracking-[7px]">
             breads
           </h1>
         </div>
         <div className="z-50 flex w-full flex-col items-center justify-center gap-4 bg-[#fff] px-8 pb-8 pt-8 md:w-[33%] md:px-12 md:pb-20 md:pt-12">
-          <Image
+          <motion.img
             src={"/images/home/products/image2.png"}
             width={281}
             height={74}
             alt="image"
             className="h-auto w-full"
+            initial={{ opacity: 0, y: 50, scale: 0.8 }}
+            whileInView={{ opacity: 1, y: 0, scale: 1 }}
+            viewport={{ once: false, amount: 0.5 }}
+            transition={{ duration: 1.5, ease: "easeOut" }}
           />
           <h1 className="font-open_sans text-lg font-[400] uppercase text-[#323232] md:text-xl md:tracking-[7px]">
             breads
           </h1>
         </div>
         <div className="z-50 flex w-full flex-col items-center justify-center gap-4 bg-[#fff] px-8 pb-8 pt-8 md:w-[33%] md:px-12 md:pb-20 md:pt-12">
-          <Image
+          <motion.img
             src={"/images/home/products/image3.png"}
             width={281}
             height={74}
             alt="image"
             className="h-auto w-full"
+            initial={{ opacity: 0, y: 50, scale: 0.8 }}
+            whileInView={{ opacity: 1, y: 0, scale: 1 }}
+            viewport={{ once: false, amount: 0.5 }}
+            transition={{ duration: 1.5, ease: "easeOut" }}
           />
           <h1 className="font-open_sans text-lg font-[400] uppercase text-[#323232] md:text-xl md:tracking-[7px]">
             breads

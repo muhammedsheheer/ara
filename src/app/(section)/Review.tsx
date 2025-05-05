@@ -9,6 +9,7 @@ import {
 } from "@/components/ui/carousel";
 import { useRestaurant } from "@/context/RestaurantContext";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 const Reviews = ({}) => {
   const { reviews } = useRestaurant();

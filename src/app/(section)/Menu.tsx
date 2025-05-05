@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { motion } from "framer-motion";
 
 const Menu: React.FC = () => {
   return (
@@ -9,12 +10,16 @@ const Menu: React.FC = () => {
       <div className="flex flex-col md:flex-row">
         <div className="relative flex w-full flex-col bg-[#D0A36C] pb-14 md:w-1/2">
           <div className="absolute bottom-0 md:left-20 md:right-20">
-            <Image
+            <motion.img
               src="/images/home/menu/cockie.png"
               width={281}
               height={74}
               alt="menu image"
               className="h-full w-full"
+              initial={{ opacity: 0, y: 100 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: false }}
+              transition={{ duration: 1.5, ease: "easeOut" }}
             />
           </div>
           <Image
@@ -47,7 +52,13 @@ const Menu: React.FC = () => {
             className="h-full w-full md:h-[150px]"
           />
         </div>
-        <div className="flex w-full flex-col gap-6 px-4 py-8 md:w-1/2 md:px-32 md:py-24">
+        <motion.div
+          className="flex w-full flex-col gap-6 px-4 py-8 md:w-1/2 md:px-32 md:py-24"
+          initial={{ opacity: 0, x: 100 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: false }}
+          transition={{ duration: 1.5, ease: "easeOut" }}
+        >
           <div className="flex flex-col items-center text-center md:items-start md:text-left">
             <h1 className="font-poppins text-3xl font-[400] uppercase text-[#6B4B2B] md:text-4xl">
               the MENU{" "}
@@ -57,27 +68,27 @@ const Menu: React.FC = () => {
             {[
               {
                 name: "Roasted lamb rump",
-                price: "$25",
+                price: "£25",
                 desc: "Grilled lamb cutlets, pomegranate glaze, butternut squash",
               },
               {
                 name: "Pan seared sea bass",
-                price: "$38",
+                price: "£38",
                 desc: "Saffron and mussel’s broth, new potatoes, edamame beans",
               },
               {
                 name: "King prawns and lobster",
-                price: "$38",
+                price: "£38",
                 desc: "Creamy saffron, sauce Vierge",
               },
               {
                 name: "Beef burger meal",
-                price: "$32",
+                price: "£32",
                 desc: "Classic greek salad, barrel aged feta cheese, bread",
               },
               {
                 name: "Roasted lamb rump",
-                price: "$25",
+                price: "£25",
                 desc: "Grilled lamb cutlets, pomegranate glaze, butternut squash",
               },
             ].map((item, index) => (
@@ -104,7 +115,7 @@ const Menu: React.FC = () => {
               </Button>
             </Link>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
